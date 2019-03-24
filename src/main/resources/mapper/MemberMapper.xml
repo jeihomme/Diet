@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.diet.project.demo.dao.MemberMapper">
+    <select id="memberCount" resultType="int">
+        SELECT COUNT(*) FROM employee
+
+    </select>
+<!--com.diet.project.demo.domain.Member-->
+    <select id="memberList" resultType="hashmap">
+
+        SELECT name
+                ,position
+                ,worktype
+                ,store
+                ,id
+--                 ,regdate
+         FROM employee
+
+    </select>
+    
+</mapper>
